@@ -8,7 +8,11 @@ package zoosim;
  *
  * @author tangm
  */
-public abstract class BirdAnim extends Animal implements IFlyable{
+public class BirdAnim extends Animal implements IFlyable{
     boolean canFly = true;
+
+    public BirdAnim(String a, String b, char c, int d, int e, int f) {
+        super(a, b, c, d, e, f);
+    }
     
 }

@@ -8,7 +8,7 @@ package zoosim;
  *
  * @author tangm
  */
-public interface IEntity extends IObject{
+public interface IEntity{
     void move();
     void makeSound();
     void eat();

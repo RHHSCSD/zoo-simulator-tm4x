@@ -8,10 +8,11 @@ package zoosim;
  *
  * @author tangm
  */
-public class Things implements IObject{
+public class Things extends Object{
+    
     //type of object, food, rock, tree, buildings
-    String type;
-    //small, medium, large sizes
-    int size;
+    private String type;
+    //small = 0, medium = 1, large = 2
+    private int size;
     
 }

@@ -8,6 +8,8 @@ package zoosim;
  *
  * @author tangm
  */
-public abstract class LandAnim extends Animal{
-    
+public class LandAnim extends Animal{
+    public LandAnim(String a, String b, char c, int d, int e, int f) {
+        super(a, b, c, d, e, f);
+    }
 }

@@ -8,7 +8,19 @@ package zoosim;
  *
  * @author tangm
  */
-public interface IObject {
-    void turn(double degrees);
-    void place(int x, int y);
+public abstract class Object {
+    
+    double degrees;
+    int x;
+    int y;
+    Image image;
+    
+    void turn(double d){
+        degrees += d;
+    }
+    
+    public void place(int x1, int y1){
+        x = x1;
+        y = y1;
+    }
 }

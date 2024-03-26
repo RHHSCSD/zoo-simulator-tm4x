@@ -8,7 +8,11 @@ package zoosim;
  *
  * @author tangm
  */
-public abstract class WaterAnim extends Animal implements ISwimmable{
+public class WaterAnim extends Animal implements ISwimmable{
+    
     boolean canBreathe = true;
     
+    public WaterAnim(String a, String b, char c, int d, int e, int f) {
+        super(a, b, c, d, e, f);
+    }
 }
