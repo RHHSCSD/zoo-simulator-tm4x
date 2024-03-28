@@ -4,18 +4,35 @@
  */
 package zoosim;
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  *
  * @author tangm
  */
 public class Zoo {
+
+
     
-    Scanner sc = new Scanner(System.in);
-    // Add's an animal by asking users 
+    private Scanner sc = new Scanner(System.in);
+    //array to keep all animals
+    private ArrayList<Animal> animals = new ArrayList<>(0);
     
+        /**
+     * @return the animals
+     */
+    public ArrayList<Animal> getAnimals() {
+        return animals;
+    }
+
+    /**
+     * @param animals the animals to set
+     */
+    public void setAnimals(ArrayList<Animal> animals) {
+        this.animals = animals;
+    }
     
-    public Animal addAnimal(){
-        
+    // Add's an animal to animals array by asking users for their details
+    public void addAnimal(){
         
         System.out.println("What is it's name?");
         String a = sc.nextLine();
@@ -29,20 +46,46 @@ public class Zoo {
         int e = sc.nextInt();
         System.out.println("How much do they weigh?");
         int f = sc.nextInt(); 
-        Animal h;
-        
+              
         System.out.println("Is it a land(0), water(1), or bird(2) animal?");
-        int g = sc.nextInt();
-        if(g==0){
-            h = new LandAnim(a,b,c,d,e,f);
-        } else if (g==1) {
-            h = new WaterAnim(a,b,c,d,e,f);
+        int type = sc.nextInt();
+        if(type==0){
+            getAnimals().add(new LandAnim(a,b,c,d,e,f));
+        } else if (type==1) {
+            getAnimals().add(new WaterAnim(a,b,c,d,e,f));
         } else {
-            h = new BirdAnim(a,b,c,d,e,f);
+            getAnimals().add(new BirdAnim(a,b,c,d,e,f));
         }
-        return h;
     }
     
+    public void feedAll(){
+        for(Animal a: animals){
+            a.eat();
+        }
+        
+        System.out.println("All animals have eaten");
+    }
     
+    public void sleepAll(){
+        for(Animal a: animals){
+            a.sleep();
+        }
+        System.out.println("All animals have slept");
+    }
     
+    public void toStringAll(){
+        for(Animal a: animals){
+            System.out.println(a.toString());
+        }
+    }
+    
+    public void moveAll(){
+        for(Animal a: animals){
+            a.move();
+        }
+    }
+     //returns animal from id
+     public Animal getAnimal(int i){
+       return animals.get(i);  
+     }
 }

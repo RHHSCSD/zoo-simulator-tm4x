@@ -11,5 +11,5 @@ package zoosim;
 public interface IFlyable {
     void fly();
     void land();
-    void isFlying();
+    boolean isFlying();
 }

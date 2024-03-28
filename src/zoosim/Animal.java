@@ -22,6 +22,7 @@ public abstract class Animal extends Object implements IEntity{
     private int hunger;
     private int fatigue; 
     private String sound;
+    
  
     //getters and setters
     public String getName() {
@@ -55,10 +56,15 @@ public abstract class Animal extends Object implements IEntity{
     public void setSound(String sound) {
         this.sound = sound;
     }
+    //returns numbe of all animals created
+    public static int getAnimals() {
+        return animals;
+    }
+
+    
     // name, species, sex, age, speed, weight
     public Animal(String a, String b, char c, int d, int e, int f){
-        animals++;
-        id = animals;
+        makeID();
         name = a;
         species = b;
         sex = c;
@@ -72,7 +78,6 @@ public abstract class Animal extends Object implements IEntity{
     
     //gets the angle of an animal and changes coordinates accordingly
     public void move(){
-        System.out.println("movement");
         double rDegrees = Math.toRadians(degrees);
         x += Math.cos(rDegrees)*speed;
         y += Math.sin(rDegrees)*speed;
@@ -91,14 +96,17 @@ public abstract class Animal extends Object implements IEntity{
         fatigue = 100;
     }
     
-    
-    
+    //gives a unique integer identifer to each animal
     public void makeID(){
-        animals = 
-        id = animals;
+        animals ++;
+        id = animals-1;
     }
     
-    
-    
-    
+    //returns a string representation of an animal
+    public String toString(){
+        String s = ("Name: " + name + "|| Species " + species + "|| Sex "
+                + sex + "|| Age: " + age + "|| Weight: " + size + "|| Speed " + 
+                speed + "|| Hunger: " + hunger + "|| Fatigue " + fatigue);
+        return s;       
+    }
 }

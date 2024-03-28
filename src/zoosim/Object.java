@@ -15,8 +15,10 @@ public abstract class Object {
     int y;
     Image image;
     
+    //changes the degrees of an object and simplifies it
     void turn(double d){
         degrees += d;
+        degrees = degrees % 360;
     }
     
     public void place(int x1, int y1){

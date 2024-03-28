@@ -9,6 +9,7 @@ package zoosim;
  * @author tangm
  */
 public interface ISwimmable {
-    void canSurface();
+    boolean canSurface();
     void swim();
+    void surface();
 }

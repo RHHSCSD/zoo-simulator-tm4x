@@ -12,4 +12,11 @@ public class LandAnim extends Animal{
     public LandAnim(String a, String b, char c, int d, int e, int f) {
         super(a, b, c, d, e, f);
     }
+    public void makeSound(){
+        System.out.println("*roar*");
+    }
+    
+     public String toString(){
+        return this.toString() + "|| Land Animal";
+    }
 }
