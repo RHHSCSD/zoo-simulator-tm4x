@@ -57,5 +57,19 @@ public class ZooSim {
             }
         }
     }
-    
 }
+
+
+/*Discussion question
+    Predator/Pray: I would add a hierarchy system for all the animals to 
+indicate which animal eats another like a trophic pyramid where snakes eat worms
+and what not. Animals would have a variable for dead/alive or they would just be 
+erased. There can also be strength and health variables if I wanted to make the 
+simulation more videogame-like. 
+
+    Carnivores/Omnivores/Herbivores: I would add a variable in the animal class 
+that indicates if an animal is carnivore or omnivore or herbivore and different
+types foods that are either meet or vegetable and obviously herbivores can only 
+eat vegtables and carnivores can only eat meat to satiate their hunger.
+
+*/
