@@ -17,6 +17,6 @@ public class LandAnim extends Animal{
     }
     
      public String toString(){
-        return this.toString() + "|| Land Animal";
+        return super.toString() + "|| Land Animal";
     }
 }

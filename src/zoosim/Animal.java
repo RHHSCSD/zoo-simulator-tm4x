@@ -103,6 +103,7 @@ public abstract class Animal extends Object implements IEntity{
     }
     
     //returns a string representation of an animal
+    @Override
     public String toString(){
         String s = ("Name: " + name + "|| Species " + species + "|| Sex "
                 + sex + "|| Age: " + age + "|| Weight: " + size + "|| Speed " + 

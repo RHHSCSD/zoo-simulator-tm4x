@@ -45,7 +45,7 @@ public class BirdAnim extends Animal implements IFlyable{
     }
     
      public String toString(){
-        return this.toString() + "Bird Animal";
+        return super.toString() + "Bird Animal";
     }
     
 }

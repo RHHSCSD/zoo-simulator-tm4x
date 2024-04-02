@@ -46,6 +46,6 @@ public class WaterAnim extends Animal implements ISwimmable{
     }
     
     public String toString(){
-        return this.toString() + "|| Water Animal";
+        return super.toString() + "|| Water Animal";
     }
 }
